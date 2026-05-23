@@ -7,25 +7,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Sistema de Gestión de Tareas</h1>
-    </header>
-    
-    <main>
-        <section id="task-form">
-        <h2>Agregar Nueva Tarea</h2>
-        <form id="new-task-form">
-            <input type="text" id="task-title" placeholder="Título de la tarea" required>
-            <textarea id="task-description" placeholder="Descripción de la tarea"></textarea>
-            <button type="submit">Agregar Tarea</button>
-        </form>
-        </section>
-    
-        <section id="task-list">
-        <h2>Lista de Tareas</h2>
-        <ul id="tasks"></ul>
-        </section>
-    </main>
-    
-    <script src="script.js"></script>
+
+  <main class="container">
+    <h1>To Do - Lista de Tareas</h1>
+
+    <section class="form-section">
+      <h2>Crear nueva tarea</h2>
+
+      <form id="taskForm">
+        <input type="text" id="title" placeholder="Título de la tarea">
+        <textarea id="description" placeholder="Descripción"></textarea>
+        <input type="date" id="date">
+
+        <button type="submit">Guardar tarea</button>
+      </form>
+
+      <p id="message"></p>
+    </section>
+
+    <section class="tasks-section">
+      <h2>Listado de tareas</h2>
+      <div id="taskList" class="task-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+</html>
