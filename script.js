@@ -73,6 +73,7 @@ function deleteTask(index) {
     message.textContent = "Tarea eliminada correctamente.";
     message.style.color = "green";
     renderTasks();
+    }
 }
 
 function completeTask(index) {
