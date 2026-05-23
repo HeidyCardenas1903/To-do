@@ -64,3 +64,13 @@ function editTask(index) {
     message.textContent = "Editando tarea seleccionada.";
     message.style.color = "#f59e0b";
 }
+function deleteTask(index) {
+  const confirmDelete = confirm("¿Estás seguro de eliminar esta tarea?");
+
+  if (confirmDelete) {
+    tasks.splice(index, 1);
+    message.textContent = "Tarea eliminada correctamente.";
+    message.style.color = "green";
+    renderTasks();
+  }
+}
