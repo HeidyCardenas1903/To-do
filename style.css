@@ -101,3 +101,7 @@ button:hover {
 .complete-btn {
   background: #16a34a;
 }
+
+.task-card.completed {
+  background: #d1fae5;
+  tex
