@@ -43,12 +43,18 @@ function renderTasks() {
 
   tasks.forEach((task, index) => {
     const card = document.createElement("div");
-    card.className = "task-card";
+    card.className = task.completed ? "task-card completed" : "task-card";
 
     card.innerHTML = `
       <h3>${task.title}</h3>
       <p>${task.description}</p>
       <p><strong>Fecha:</strong> ${task.date}</p>
+
+      <div class="task-actions">
+        <button class="edit-btn" onclick="editTask(${index})">Editar</button>
+        <button class="delete-btn" onclick="deleteTask(${index})">Eliminar</button>
+        <button class="complete-btn" onclick="completeTask(${index})">Completar</button>
+      </div>
     `;
 
     taskList.appendChild(card);
