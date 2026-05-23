@@ -64,6 +64,7 @@ function editTask(index) {
     message.textContent = "Editando tarea seleccionada.";
     message.style.color = "#f59e0b";
 }
+
 function deleteTask(index) {
   const confirmDelete = confirm("¿Estás seguro de eliminar esta tarea?");
 
@@ -72,5 +73,9 @@ function deleteTask(index) {
     message.textContent = "Tarea eliminada correctamente.";
     message.style.color = "green";
     renderTasks();
-  }
+}
+
+function completeTask(index) {
+  tasks[index].completed = !tasks[index].completed;
+  renderTasks();
 }
